@@ -123,7 +123,7 @@ mvn package
 ```
 mvn spring-boot:run
 ```
-for more information about configuration server check config-service [README.md](https://github.com/mba/microservices/tree/master/config-service).
+for more information about configuration server check config-service [README.md](https://github.com/MBA90/microservices/blob/master/config-service/README.md).
 
 2-Then you can run any service after that with the same way
 
@@ -144,7 +144,7 @@ Actually no it is not, service configser will really starts before licensingser,
 
 licensingser needs configser up and running and in a healthy state, how can we assure such check before really starts licensingser !!!.
 
-Check licensing-service [Dockerfile](https://github.com/mba/microservices/tree/master/licensing-service)
+Check licensing-service [Dockerfile](https://github.com/MBA90/microservices/blob/master/licensing-service/Dockerfile) and [run.sh](https://github.com/MBA90/microservices/blob/master/licensing-service/docker/run.sh)
 
 ## Building tools
 
