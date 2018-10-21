@@ -1,0 +1,13 @@
+# line 05 :Specify the name of the licensing service so that Spring Cloud Config client knows which service is being looked up
+# line 08 :Specify the default profile the service should run. Profile maps to environment. prifile can be default, dev, prod
+# line 10 :Specify the location of the Spring Cloud Config server.
+
+spring:
+   application:
+      name: licensingservice
+   profiles:
+      active: default
+   cloud:
+      config:
+         uri: http://localhost:8888
+      

@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+   licensingser:
+      image: mba/licensing-service:latest
+      ports:
+         - "8080:8080"
+      environment:
+         PROFILE: dev
+         CONFIG_SERVICE_URI: "http://configser:8888"
+         CONFIG_SERVICE_PORT:  "8888"
+         DATABASE_SERVER_PORT: "3306"
+      depends_on:
+       - "db"
+       - "configser"
+   
+   configser:
+      image: mba/config-service:latest 
+      ports:
+         - "8888:8888"
+   db:
+      image: mysql:8.0.12
+      ports:
+         - "3306:3306"
+      environment:
+         MYSQL_ROOT_PASSWORD: "root1234"
+         MYSQL_DATABASE: "eagle_eye_dev" 
+      volumes:
+         - "/Users/MBA/dockerdata/mbaMicroserviceMySql:/var/lib/mysql"   
+         

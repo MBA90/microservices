@@ -1,0 +1,20 @@
+# The application.yml file will tell your Spring Cloud configuration service what port to listen to,
+# and where to locate the back end that will serve up the configuration data.
+
+# line 09: telling the configuration server what port number it should listen to for all requests for configuration
+# line 11: telling spring cloud configuration server that is using file system for storing application configuration info
+# line 13: telling spring cloud configuration server where is the directory of application data reside
+
+server:
+   port: 8888
+spring:
+   profiles:
+      active: native
+   cloud:
+      config:
+         server:
+            native:
+               searchLocations: classpath:config/licensingservice
+                                
+      
+ 
