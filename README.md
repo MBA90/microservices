@@ -102,8 +102,8 @@ docker-compose --version
 ## Project structure
 
 #### mba-microservices
-1- [licensing-service}(https://github.com/mba/microservices/tree/master/licensing-service)
-2- [config-service] (https://github.com/mba/microservices/tree/master/config-service)
+1-[licensing-service](https://github.com/MBA90/microservices/tree/master/licensing-service)
+2-[config-service] (https://github.com/MBA90/microservices/tree/master/config-service)
 	
 Project is consisted of main project (mba-microservices) and it contain each service as a sub module also there is <b>config-service</b> which will be used as a centralized config service provider.
 
