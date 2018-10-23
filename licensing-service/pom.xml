@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.mba</groupId>
-		<artifactId>mba-microservices</artifactId>
+		<artifactId>microservices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>licensing-service</artifactId>
