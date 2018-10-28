@@ -19,6 +19,7 @@
 		<module>licensing-service</module>
 		<module>config-service</module>
 		<module>eureka-service</module>
+		<module>org-service</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
