@@ -1,0 +1,10 @@
+spring:
+   application:
+      name: orgservice
+   profiles: 
+      active: default
+   cloud:
+      config: 
+         uri: http://localhost:8888
+encrypt: 
+  key: "mykey" 
