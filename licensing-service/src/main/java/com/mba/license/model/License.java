@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * @author MBA
@@ -25,6 +26,9 @@ public class License {
 
 	@Column(name = "license_type", nullable = false)
 	private String licenseType;
+
+	@Transient
+	private Organization organization;
 
 	public String getLicenseId() {
 		return licenseId;
@@ -58,6 +62,14 @@ public class License {
 		this.licenseType = licenseType;
 	}
 
+	public Organization getOrganization() {
+		return organization;
+	}
+
+	public void setOrganization(Organization organization) {
+		this.organization = organization;
+	}
+
 	public License withId(String id) {
 		this.setLicenseId(id);
 		return this;
@@ -75,6 +87,11 @@ public class License {
 
 	public License withLicenseType(String licenseType) {
 		this.setLicenseType(licenseType);
+		return this;
+	}
+
+	public License withOrgnization(Organization organization) {
+		this.setOrganization(organization);
 		return this;
 	}
 }

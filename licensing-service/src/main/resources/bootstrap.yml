@@ -13,4 +13,13 @@ spring:
          
 encrypt: 
   key: "mykey" 
+
+eureka:
+   instance:
+      perferIpAddress: true # Register the IP of the service rather than the server name.
+   client:
+      registerWithEureka: true # Register the service with Eureka.
+      fetchRegistry: true # Pull down a local copy of the registry.
+      serviceUrl:
+         defaultZone: http://localhost:8761/eureka/ # Location of the Eureka Service.
       

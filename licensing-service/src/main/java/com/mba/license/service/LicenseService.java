@@ -13,7 +13,7 @@ public class LicenseService {
 
 	@Autowired
 	private LicenseRepository licenseRepository;
-
+	
 	public License getLicene(String organizationId, String licenseId) {
 		return licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
 	}

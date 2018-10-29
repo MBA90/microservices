@@ -11,23 +11,31 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mba.license.model.License;
+import com.mba.license.model.Organization;
 import com.mba.license.service.LicenseService;
+import com.mba.license.service.client.OrganizationRestTemplateClient;
 
 @RestController
 @RequestMapping(value = "v1/organizations/{organizationId}/licenses")
 public class LicenseServiceController {
-	
+
 	@Autowired
 	private LicenseService licenseService;
-	
-	@RequestMapping(value="/")
+
+	@Autowired
+	private OrganizationRestTemplateClient organizationRestTemplateClient;
+
+	@RequestMapping(value = "/")
 	public List<License> getLicense(@PathVariable String organizationId) {
 		return licenseService.getLicenseByOrg(organizationId);
 	}
-	
+
 	@RequestMapping(value = "/{licenseId}", method = RequestMethod.GET)
 	public License getLicense(@PathVariable String organizationId, @PathVariable String licenseId) {
-		return licenseService.getLicene(organizationId, licenseId);
+
+		Organization organization = organizationRestTemplateClient.getOrganization(organizationId);
+		License license = licenseService.getLicene(organizationId, licenseId);
+		return license.withOrgnization(organization);
 	}
 
 	@RequestMapping(value = "{licenseId}", method = RequestMethod.PUT)

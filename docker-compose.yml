@@ -10,9 +10,12 @@ services:
          CONFIG_SERVICE_PORT:  "8888"
          DATABASE_SERVER_PORT: "3306"
          ENCRYPT_KEY: "mykey"
+         EUREKA_SERVICE_URI: "http://eurekaservice:8761/eureka/"
+         EUREKA_SERVER_PORT: "8761"
       depends_on:
        - "db"
        - "configser"
+       - "eurekaservice"
    
    orgservice:
       image: mba/org-service:latest
@@ -24,9 +27,12 @@ services:
          CONFIG_SERVICE_PORT:  "8888"
          DATABASE_SERVER_PORT: "3306"
          ENCRYPT_KEY: "mykey"
+         EUREKA_SERVICE_URI: "http://eurekaservice:8761/eureka/"
+         EUREKA_SERVER_PORT: "8761"
       depends_on:
        - "db"
        - "configser"
+       - "eurekaservice"
         
    configser:
       image: mba/config-service:latest 
@@ -43,4 +49,9 @@ services:
          MYSQL_DATABASE: "eagle_eye_dev" 
       volumes:
          - "/Users/MBA/dockerdata/mbaMicroserviceMySql:/var/lib/mysql"   
+
+   eurekaservice:
+      image: mba/eureka-service:latest
+      ports:
+         - "8761:8761"
          
