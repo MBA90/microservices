@@ -118,7 +118,7 @@ In this project i used the second option (<b>Spring Discovery client enabled Res
 [Apliication.java](https://github.com/MBA90/microservices/blob/master/licensing-service/src/main/java/com/mba/license/Application.java)
 
 * to build the target URL using the Eureka service ID of the service you want to call.
-(OrganizationRestTemplateClient.java)[https://github.com/MBA90/microservices/blob/master/licensing-service/src/main/java/com/mba/license/service/client/OrganizationRestTemplateClient.java]
+[OrganizationRestTemplateClient.java](https://github.com/MBA90/microservices/blob/master/licensing-service/src/main/java/com/mba/license/service/client/OrganizationRestTemplateClient.java)
 
 For more about service consuming using Spring Discovery client enabled RestTemplate, you can check licensing-service.
 
