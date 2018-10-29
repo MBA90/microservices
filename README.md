@@ -105,6 +105,7 @@ docker-compose --version
 1-[licensing-service](https://github.com/MBA90/microservices/tree/master/licensing-service).
 2-[config-service](https://github.com/MBA90/microservices/tree/master/config-service).
 3-[eureka-service](https://github.com/MBA90/microservices/tree/master/eureka-service).
+3-[org-service](https://github.com/MBA90/microservices/tree/master/org-service). 
 	
 Project is consisted of main project (microservices) and it contain each service as a sub module also there is <b>config-service</b> which will be used as a centralized config service provider.
 
