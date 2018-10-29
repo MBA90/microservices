@@ -48,8 +48,9 @@ eureka:
    server: 
       waitTimeInMsWhenSyncEmpty: 5
 ```
+
 3-Add Application bootstrap class to start eureka service.
-4-Now you can run this command in terminal however navigate where eureka pom.xml file located, in browser type this URL <b>http://localhost:8761/<b/>
+4-Now you can run this command in terminal however navigate where eureka pom.xml file located, in browser type this URL <b> http://localhost:8761/ <b/>
 
 ```
 mvn spring-boot:run
